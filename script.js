@@ -4,6 +4,7 @@ var day = dateObj.getUTCDate();
 var year = dateObj.getUTCFullYear();
 newdate = year + "-" + month + "-" + day;
 document.getElementById("input-date").max = newdate;
+document.getElementById("input-date").min = "1900-01-01";
 
 
 let selectionString = "";
@@ -285,13 +286,13 @@ let exchangeValue = 1;
 
 async function showCurrency() {
     let dateSelection = document.getElementById("input-date").value;
-    let baseURL = `https://api.ratesapi.io/api/${dateSelection}?base=${selectionString}&symbols=${targetSelectionString}`;
-    let response = await fetch(baseURL, {
+    let URL = `https://api.ratesapi.io/api/${dateSelection}?base=${selectionString}&symbols=${targetSelectionString}`;
+    let response = await fetch(URL, {
         method: 'GET',
     });
 
     let resultValue = await response.json();
-    console.log(resultValue.rates);
+    console.log(resultValue);
     document.getElementById("from-converter").innerText = selectionString;
     document.getElementById("to-converter").innerText = targetSelectionString;
 
@@ -300,12 +301,20 @@ async function showCurrency() {
     exchangeValue = Object.values(resultValue.rates)[0];
 }
 
-function converter(){
+function converter() {
     let fromValue = document.getElementById("from-input-field").value;
-    document.getElementById("to-input-field").value = (fromValue * exchangeValue).toFixed(2);
+    if (fromValue < 0) {
+        document.getElementById("to-input-field").value = 0;
+    } else {
+        document.getElementById("to-input-field").value = (fromValue * exchangeValue).toFixed(2);
+    }
 }
 
-function reverseConverter(){
+function reverseConverter() {
     let toValue = document.getElementById("to-input-field").value;
-    document.getElementById("from-input-field").value = (toValue / exchangeValue).toFixed(2);
+    if (toValue < 0) {
+        document.getElementById("from-input-field").value = 0;
+    } else {
+        document.getElementById("from-input-field").value = (toValue / exchangeValue).toFixed(2);
+    }
 }

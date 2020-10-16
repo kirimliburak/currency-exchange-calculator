@@ -1,13 +1,42 @@
-#main-container, #result-container{
+#main-container, #result-container {
     text-align: center;
     justify-content: center;
     display: flex;
     flex-direction: column;
-    margin-top: 3%;
+    padding-top: 3%;
+    padding-bottom: 3%;
 }
 
-#container-header{
+#container-header {
     font-weight: bold;
     color: rgb(42, 214, 42);
     font-size: 28px;
+}
+
+body {
+    margin: 0 !important;
+    height: 100vh;
+    background: rgb(45, 121, 31);
+    background: linear-gradient(140deg, rgba(45, 121, 31, 1) 0%, rgba(84, 176, 89, 1) 36%, rgba(230, 236, 114, 1) 100%);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+#exchange-form {
+    background-color: white;
+    border-radius: 1%;
+    -webkit-box-shadow: 0px 0px 32px 0px rgba(77,72,77,1);
+    -moz-box-shadow: 0px 0px 32px 0px rgba(77,72,77,1);
+    box-shadow: 0px 0px 32px 0px rgba(77,72,77,1);
+}
+
+#input-date{
+    height: 55px;
+    width: 200px;
+    text-align: center;
+    font-size: large;
+    font-weight: 500;
+    border: 2px solid rgb(38, 247, 38);
+    border-radius: 4%;
 }
