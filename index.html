@@ -12,53 +12,160 @@
 
 <body>
     <center>
-        <div class="container">
-            <p id="container-header">Currency Exchange Calculator</p>
-            <div class="dropdown">
-                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
-                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Select Base Currency
-                </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" id="TRY" href="#" onclick="baseSelection(1);">TRY</a>
-                    <a class="dropdown-item" id="USD" href="#" onclick="baseSelection(2);">USD</a>
-                    <a class="dropdown-item" id="GBP" href="#" onclick="baseSelection(3);">GBP</a>
-                    <a class="dropdown-item" id="HKD" href="#" onclick="baseSelection(4);">HKD</a>
-                    <a class="dropdown-item" id="IDR" href="#" onclick="baseSelection(5);">IDR</a>
-                    <a class="dropdown-item" id="ILS" href="#" onclick="baseSelection(6);">ILS</a>
-                    <a class="dropdown-item" id="DKK" href="#" onclick="baseSelection(7);">DKK</a>
-                    <a class="dropdown-item" id="INR" href="#" onclick="baseSelection(8);">INR</a>
-                    <a class="dropdown-item" id="CHF" href="#" onclick="baseSelection(9);">CHF</a>
-                    <a class="dropdown-item" id="MXN" href="#" onclick="baseSelection(10);">MXN</a>
-                    <a class="dropdown-item" id="CZK" href="#" onclick="baseSelection(11);">CZK</a>
-                    <a class="dropdown-item" id="SGD" href="#" onclick="baseSelection(12);">SGD</a>
-                    <a class="dropdown-item" id="THB" href="#" onclick="baseSelection(13);">THB</a>
-                    <a class="dropdown-item" id="HRK" href="#" onclick="baseSelection(14);">HRK</a>
-                    <a class="dropdown-item" id="EUR" href="#" onclick="baseSelection(15);">EUR</a>
-                    <a class="dropdown-item" id="MYR" href="#" onclick="baseSelection(16);">MYR</a>
-                    <a class="dropdown-item" id="NOK" href="#" onclick="baseSelection(17);">NOK</a>
-                    <a class="dropdown-item" id="CNY" href="#" onclick="baseSelection(18);">CNY</a>
-                    <a class="dropdown-item" id="BGN" href="#" onclick="baseSelection(19);">BGN</a>
-                    <a class="dropdown-item" id="PHP" href="#" onclick="baseSelection(20);">PHP</a>
-                    <a class="dropdown-item" id="PLN" href="#" onclick="baseSelection(21);">PLN</a>
-                    <a class="dropdown-item" id="ZAR" href="#" onclick="baseSelection(22);">ZAR</a>
-                    <a class="dropdown-item" id="CAD" href="#" onclick="baseSelection(23);">CAD</a>
-                    <a class="dropdown-item" id="ISK" href="#" onclick="baseSelection(24);">ISK</a>
-                    <a class="dropdown-item" id="BRL" href="#" onclick="baseSelection(25);">BRL</a>
-                    <a class="dropdown-item" id="RON" href="#" onclick="baseSelection(26);">RON</a>
-                    <a class="dropdown-item" id="NZD" href="#" onclick="baseSelection(27);">NZD</a>
-                    <a class="dropdown-item" id="JPY" href="#" onclick="baseSelection(28);">JPY</a>
-                    <a class="dropdown-item" id="RUB" href="#" onclick="baseSelection(29);">RUB</a>
-                    <a class="dropdown-item" id="KRW" href="#" onclick="baseSelection(30);">KRW</a>
-                    <a class="dropdown-item" id="AUD" href="#" onclick="baseSelection(31);">AUD</a>
-                    <a class="dropdown-item" id="HUF" href="#" onclick="baseSelection(32);">HUF</a>
-                    <a class="dropdown-item" id="SEK" href="#" onclick="baseSelection(33);">SEK</a>
+        <div class="container" id="main-container">
+            <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-6">
+                    <p id="container-header">Currency Exchange Calculator</p>
+                    <div class="container">
+                        <div class="row" style="align-items: center; display: flex; justify-content: center;">
+                            <div class="dropdown">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Select Base Currency
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" id="TRY" href="#" onclick="baseSelection(1);">TRY</a>
+                                    <a class="dropdown-item" id="USD" href="#" onclick="baseSelection(2);">USD</a>
+                                    <a class="dropdown-item" id="GBP" href="#" onclick="baseSelection(3);">GBP</a>
+                                    <a class="dropdown-item" id="HKD" href="#" onclick="baseSelection(4);">HKD</a>
+                                    <a class="dropdown-item" id="IDR" href="#" onclick="baseSelection(5);">IDR</a>
+                                    <a class="dropdown-item" id="ILS" href="#" onclick="baseSelection(6);">ILS</a>
+                                    <a class="dropdown-item" id="DKK" href="#" onclick="baseSelection(7);">DKK</a>
+                                    <a class="dropdown-item" id="INR" href="#" onclick="baseSelection(8);">INR</a>
+                                    <a class="dropdown-item" id="CHF" href="#" onclick="baseSelection(9);">CHF</a>
+                                    <a class="dropdown-item" id="MXN" href="#" onclick="baseSelection(10);">MXN</a>
+                                    <a class="dropdown-item" id="CZK" href="#" onclick="baseSelection(11);">CZK</a>
+                                    <a class="dropdown-item" id="SGD" href="#" onclick="baseSelection(12);">SGD</a>
+                                    <a class="dropdown-item" id="THB" href="#" onclick="baseSelection(13);">THB</a>
+                                    <a class="dropdown-item" id="HRK" href="#" onclick="baseSelection(14);">HRK</a>
+                                    <a class="dropdown-item" id="EUR" href="#" onclick="baseSelection(15);">EUR</a>
+                                    <a class="dropdown-item" id="MYR" href="#" onclick="baseSelection(16);">MYR</a>
+                                    <a class="dropdown-item" id="NOK" href="#" onclick="baseSelection(17);">NOK</a>
+                                    <a class="dropdown-item" id="CNY" href="#" onclick="baseSelection(18);">CNY</a>
+                                    <a class="dropdown-item" id="BGN" href="#" onclick="baseSelection(19);">BGN</a>
+                                    <a class="dropdown-item" id="PHP" href="#" onclick="baseSelection(20);">PHP</a>
+                                    <a class="dropdown-item" id="PLN" href="#" onclick="baseSelection(21);">PLN</a>
+                                    <a class="dropdown-item" id="ZAR" href="#" onclick="baseSelection(22);">ZAR</a>
+                                    <a class="dropdown-item" id="CAD" href="#" onclick="baseSelection(23);">CAD</a>
+                                    <a class="dropdown-item" id="ISK" href="#" onclick="baseSelection(24);">ISK</a>
+                                    <a class="dropdown-item" id="BRL" href="#" onclick="baseSelection(25);">BRL</a>
+                                    <a class="dropdown-item" id="RON" href="#" onclick="baseSelection(26);">RON</a>
+                                    <a class="dropdown-item" id="NZD" href="#" onclick="baseSelection(27);">NZD</a>
+                                    <a class="dropdown-item" id="JPY" href="#" onclick="baseSelection(28);">JPY</a>
+                                    <a class="dropdown-item" id="RUB" href="#" onclick="baseSelection(29);">RUB</a>
+                                    <a class="dropdown-item" id="KRW" href="#" onclick="baseSelection(30);">KRW</a>
+                                    <a class="dropdown-item" id="AUD" href="#" onclick="baseSelection(31);">AUD</a>
+                                    <a class="dropdown-item" id="HUF" href="#" onclick="baseSelection(32);">HUF</a>
+                                    <a class="dropdown-item" id="SEK" href="#" onclick="baseSelection(33);">SEK</a>
+                                </div>
+                            </div>
+                            <p style="margin-left: 3%; margin-right: 3%; margin-top: 2%;">to</p>
+                            <div class="dropdown">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Select Target Currency
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+                                    <a class="dropdown-item" id="targetTRY" href="#"
+                                        onclick="targetSelection(1);">TRY</a>
+                                    <a class="dropdown-item" id="targetUSD" href="#"
+                                        onclick="targetSelection(2);">USD</a>
+                                    <a class="dropdown-item" id="targetGBP" href="#"
+                                        onclick="targetSelection(3);">GBP</a>
+                                    <a class="dropdown-item" id="targetHKD" href="#"
+                                        onclick="targetSelection(4);">HKD</a>
+                                    <a class="dropdown-item" id="targetIDR" href="#"
+                                        onclick="targetSelection(5);">IDR</a>
+                                    <a class="dropdown-item" id="targetILS" href="#"
+                                        onclick="targetSelection(6);">ILS</a>
+                                    <a class="dropdown-item" id="targetDKK" href="#"
+                                        onclick="targetSelection(7);">DKK</a>
+                                    <a class="dropdown-item" id="targetINR" href="#"
+                                        onclick="targetSelection(8);">INR</a>
+                                    <a class="dropdown-item" id="targetCHF" href="#"
+                                        onclick="targetSelection(9);">CHF</a>
+                                    <a class="dropdown-item" id="targetMXN" href="#"
+                                        onclick="targetSelection(10);">MXN</a>
+                                    <a class="dropdown-item" id="targetCZK" href="#"
+                                        onclick="targetSelection(11);">CZK</a>
+                                    <a class="dropdown-item" id="targetSGD" href="#"
+                                        onclick="targetSelection(12);">SGD</a>
+                                    <a class="dropdown-item" id="targetTHB" href="#"
+                                        onclick="targetSelection(13);">THB</a>
+                                    <a class="dropdown-item" id="targetHRK" href="#"
+                                        onclick="targetSelection(14);">HRK</a>
+                                    <a class="dropdown-item" id="targetEUR" href="#"
+                                        onclick="targetSelection(15);">EUR</a>
+                                    <a class="dropdown-item" id="targetMYR" href="#"
+                                        onclick="targetSelection(16);">MYR</a>
+                                    <a class="dropdown-item" id="targetNOK" href="#"
+                                        onclick="targetSelection(17);">NOK</a>
+                                    <a class="dropdown-item" id="targetCNY" href="#"
+                                        onclick="targetSelection(18);">CNY</a>
+                                    <a class="dropdown-item" id="targetBGN" href="#"
+                                        onclick="targetSelection(19);">BGN</a>
+                                    <a class="dropdown-item" id="targetPHP" href="#"
+                                        onclick="targetSelection(20);">PHP</a>
+                                    <a class="dropdown-item" id="targetPLN" href="#"
+                                        onclick="targetSelection(21);">PLN</a>
+                                    <a class="dropdown-item" id="targetZAR" href="#"
+                                        onclick="targetSelection(22);">ZAR</a>
+                                    <a class="dropdown-item" id="targetCAD" href="#"
+                                        onclick="targetSelection(23);">CAD</a>
+                                    <a class="dropdown-item" id="targetISK" href="#"
+                                        onclick="targetSelection(24);">ISK</a>
+                                    <a class="dropdown-item" id="targetBRL" href="#"
+                                        onclick="targetSelection(25);">BRL</a>
+                                    <a class="dropdown-item" id="targetRON" href="#"
+                                        onclick="targetSelection(26);">RON</a>
+                                    <a class="dropdown-item" id="targetNZD" href="#"
+                                        onclick="targetSelection(27);">NZD</a>
+                                    <a class="dropdown-item" id="targetJPY" href="#"
+                                        onclick="targetSelection(28);">JPY</a>
+                                    <a class="dropdown-item" id="targetRUB" href="#"
+                                        onclick="targetSelection(29);">RUB</a>
+                                    <a class="dropdown-item" id="targetKRW" href="#"
+                                        onclick="targetSelection(30);">KRW</a>
+                                    <a class="dropdown-item" id="targetAUD" href="#"
+                                        onclick="targetSelection(31);">AUD</a>
+                                    <a class="dropdown-item" id="targetHUF" href="#"
+                                        onclick="targetSelection(32);">HUF</a>
+                                    <a class="dropdown-item" id="targetSEK" href="#"
+                                        onclick="targetSelection(33);">SEK</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <center>
+                        <div class="container" style="margin-top: 3%;">
+                            <input type="date" name="date-picker" id="input-date">
+                        </div>
+                        <button class="btn btn-success" onclick="showCurrency();" style="margin-top: 3%;">Submit and Show</button>
+                    </center>
                 </div>
+                <div class="col-md-3"></div>
             </div>
-            <div class="container">
-                <input type="date" name="date-picker" id="input-date">
+        </div>
+        <div class="container" id="result-container">
+            <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-6">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="from-converter">-</span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="Enter a value" id="from-input-field" oninput="converter();" required>
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="to-converter">-</span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="Enter a value" id="to-input-field" oninput="reverseConverter();" required>
+                    </div>
+                </div>
+                <div class="col-md-3"></div>
             </div>
-            <button class="btn btn-success" onclick="showCurrency();">Submit and Show</button>
         </div>
     </center>
 

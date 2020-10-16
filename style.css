@@ -1,0 +1,13 @@
+#main-container, #result-container{
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 3%;
+}
+
+#container-header{
+    font-weight: bold;
+    color: rgb(42, 214, 42);
+    font-size: 28px;
+}

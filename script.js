@@ -5,198 +5,307 @@ var year = dateObj.getUTCFullYear();
 newdate = year + "-" + month + "-" + day;
 document.getElementById("input-date").max = newdate;
 
-var selectionArray = [];
-for (let i = 0; i < 33; i++) {
-    selectionArray.push(false);
-}
-
-function setOthersFalse(index) {
-    for (var k = 0; k < 33; k++) {
-        if (index != k) {
-            selectionArray[k] = false;
-        }
-    }
-}
 
 let selectionString = "";
+let targetSelectionString = "";
 
 function baseSelection(value) {
     const selection = parseInt(value);
     if (selection == 1) {
         document.getElementById("dropdownMenuButton").innerText = "TRY";
-        setOthersFalse(selection);
         selectionString = "TRY";
     }
     else if (selection == 2) {
         document.getElementById("dropdownMenuButton").innerText = "USD";
-        setOthersFalse(selection);
         selectionString = "USD";
     }
     else if (selection == 3) {
         document.getElementById("dropdownMenuButton").innerText = "GBP";
-        setOthersFalse(selection);
         selectionString = "GBP";
     }
     else if (selection == 4) {
         document.getElementById("dropdownMenuButton").innerText = "HKD";
-        setOthersFalse(selection);
         selectionString = "HKD";
     }
     else if (selection == 5) {
         document.getElementById("dropdownMenuButton").innerText = "IDR";
-        setOthersFalse(selection);
         selectionString = "IDR";
     }
     else if (selection == 6) {
         document.getElementById("dropdownMenuButton").innerText = "ILS";
-        setOthersFalse(selection);
         selectionString = "ILS";
     }
     else if (selection == 7) {
         document.getElementById("dropdownMenuButton").innerText = "DKK";
-        setOthersFalse(selection);
         selectionString = "DKK";
     }
     else if (selection == 8) {
         document.getElementById("dropdownMenuButton").innerText = "INR";
-        setOthersFalse(selection);
         selectionString = "INR";
     }
     else if (selection == 9) {
         document.getElementById("dropdownMenuButton").innerText = "CHF";
-        setOthersFalse(selection);
         selectionString = "CHF";
     }
     else if (selection == 10) {
         document.getElementById("dropdownMenuButton").innerText = "MXN";
-        setOthersFalse(selection);
         selectionString = "MXN";
     }
     else if (selection == 11) {
         document.getElementById("dropdownMenuButton").innerText = "CZK";
-        setOthersFalse(selection);
         selectionString = "CZK";
     }
     else if (selection == 12) {
         document.getElementById("dropdownMenuButton").innerText = "SGD";
-        setOthersFalse(selection);
         selectionString = "SGD";
     }
     else if (selection == 13) {
         document.getElementById("dropdownMenuButton").innerText = "THB";
-        setOthersFalse(selection);
         selectionString = "THB";
     }
     else if (selection == 14) {
         document.getElementById("dropdownMenuButton").innerText = "HRK";
-        setOthersFalse(selection);
         selectionString = "HRK";
     }
     else if (selection == 15) {
         document.getElementById("dropdownMenuButton").innerText = "EUR";
-        setOthersFalse(selection);
         selectionString = "EUR";
     }
     else if (selection == 16) {
         document.getElementById("dropdownMenuButton").innerText = "MYR";
-        setOthersFalse(selection);
         selectionString = "MYR";
     }
     else if (selection == 17) {
         document.getElementById("dropdownMenuButton").innerText = "NOK";
-        setOthersFalse(selection);
         selectionString = "NOK";
     }
     else if (selection == 18) {
         document.getElementById("dropdownMenuButton").innerText = "CNY";
-        setOthersFalse(selection);
         selectionString = "CNY";
     }
     else if (selection == 19) {
         document.getElementById("dropdownMenuButton").innerText = "BGN";
-        setOthersFalse(selection);
         selectionString = "BGN";
     }
     else if (selection == 20) {
         document.getElementById("dropdownMenuButton").innerText = "PHP";
-        setOthersFalse(selection);
         selectionString = "PHP";
     }
     else if (selection == 21) {
         document.getElementById("dropdownMenuButton").innerText = "PLN";
-        setOthersFalse(selection);
         selectionString = "PLN";
     }
     else if (selection == 22) {
         document.getElementById("dropdownMenuButton").innerText = "ZAR";
-        setOthersFalse(selection);
         selectionString = "ZAR";
     }
     else if (selection == 23) {
         document.getElementById("dropdownMenuButton").innerText = "CAD";
-        setOthersFalse(selection);
         selectionString = "CAD";
     }
     else if (selection == 24) {
         document.getElementById("dropdownMenuButton").innerText = "ISK";
-        setOthersFalse(selection);
         selectionString = "ISK";
     }
     else if (selection == 25) {
         document.getElementById("dropdownMenuButton").innerText = "BRL";
-        setOthersFalse(selection);
         selectionString = "BRL";
     }
     else if (selection == 26) {
         document.getElementById("dropdownMenuButton").innerText = "RON";
-        setOthersFalse(selection);
         selectionString = "RON";
     }
     else if (selection == 27) {
         document.getElementById("dropdownMenuButton").innerText = "NZD";
-        setOthersFalse(selection);
         selectionString = "NZD";
     }
     else if (selection == 28) {
         document.getElementById("dropdownMenuButton").innerText = "JPY";
-        setOthersFalse(selection);
         selectionString = "JPY";
     }
     else if (selection == 29) {
         document.getElementById("dropdownMenuButton").innerText = "RUB";
-        setOthersFalse(selection);
         selectionString = "RUB";
     }
     else if (selection == 30) {
         document.getElementById("dropdownMenuButton").innerText = "KRW";
-        setOthersFalse(selection);
         selectionString = "KRW";
     }
     else if (selection == 31) {
         document.getElementById("dropdownMenuButton").innerText = "AUD";
-        setOthersFalse(selection);
         selectionString = "AUD";
     }
     else if (selection == 32) {
         document.getElementById("dropdownMenuButton").innerText = "HUF";
-        setOthersFalse(selection);
         selectionString = "HUF";
     }
     else if (selection == 33) {
         document.getElementById("dropdownMenuButton").innerText = "SEK";
-        setOthersFalse(selection);
         selectionString = "SEK";
     }
 }
 
+function targetSelection(value) {
+    const selection = parseInt(value);
+    if (selection == 1) {
+        document.getElementById("dropdownMenuButton2").innerText = "TRY";
+        targetSelectionString = "TRY";
+    }
+    else if (selection == 2) {
+        document.getElementById("dropdownMenuButton2").innerText = "USD";
+        targetSelectionString = "USD";
+    }
+    else if (selection == 3) {
+        document.getElementById("dropdownMenuButton2").innerText = "GBP";
+        targetSelectionString = "GBP";
+    }
+    else if (selection == 4) {
+        document.getElementById("dropdownMenuButton2").innerText = "HKD";
+        targetSelectionString = "HKD";
+    }
+    else if (selection == 5) {
+        document.getElementById("dropdownMenuButton2").innerText = "IDR";
+        targetSelectionString = "IDR";
+    }
+    else if (selection == 6) {
+        document.getElementById("dropdownMenuButton2").innerText = "ILS";
+        targetSelectionString = "ILS";
+    }
+    else if (selection == 7) {
+        document.getElementById("dropdownMenuButton2").innerText = "DKK";
+        targetSelectionString = "DKK";
+    }
+    else if (selection == 8) {
+        document.getElementById("dropdownMenuButton2").innerText = "INR";
+        targetSelectionString = "INR";
+    }
+    else if (selection == 9) {
+        document.getElementById("dropdownMenuButton2").innerText = "CHF";
+        targetSelectionString = "CHF";
+    }
+    else if (selection == 10) {
+        document.getElementById("dropdownMenuButton2").innerText = "MXN";
+        targetSelectionString = "MXN";
+    }
+    else if (selection == 11) {
+        document.getElementById("dropdownMenuButton2").innerText = "CZK";
+        targetSelectionString = "CZK";
+    }
+    else if (selection == 12) {
+        document.getElementById("dropdownMenuButton2").innerText = "SGD";
+        targetSelectionString = "SGD";
+    }
+    else if (selection == 13) {
+        document.getElementById("dropdownMenuButton2").innerText = "THB";
+        targetSelectionString = "THB";
+    }
+    else if (selection == 14) {
+        document.getElementById("dropdownMenuButton2").innerText = "HRK";
+        targetSelectionString = "HRK";
+    }
+    else if (selection == 15) {
+        document.getElementById("dropdownMenuButton2").innerText = "EUR";
+        targetSelectionString = "EUR";
+    }
+    else if (selection == 16) {
+        document.getElementById("dropdownMenuButton2").innerText = "MYR";
+        targetSelectionString = "MYR";
+    }
+    else if (selection == 17) {
+        document.getElementById("dropdownMenuButton2").innerText = "NOK";
+        targetSelectionString = "NOK";
+    }
+    else if (selection == 18) {
+        document.getElementById("dropdownMenuButton2").innerText = "CNY";
+        targetSelectionString = "CNY";
+    }
+    else if (selection == 19) {
+        document.getElementById("dropdownMenuButton2").innerText = "BGN";
+        targetSelectionString = "BGN";
+    }
+    else if (selection == 20) {
+        document.getElementById("dropdownMenuButton2").innerText = "PHP";
+        targetSelectionString = "PHP";
+    }
+    else if (selection == 21) {
+        document.getElementById("dropdownMenuButton2").innerText = "PLN";
+        targetSelectionString = "PLN";
+    }
+    else if (selection == 22) {
+        document.getElementById("dropdownMenuButton2").innerText = "ZAR";
+        targetSelectionString = "ZAR";
+    }
+    else if (selection == 23) {
+        document.getElementById("dropdownMenuButton2").innerText = "CAD";
+        targetSelectionString = "CAD";
+    }
+    else if (selection == 24) {
+        document.getElementById("dropdownMenuButton2").innerText = "ISK";
+        targetSelectionString = "ISK";
+    }
+    else if (selection == 25) {
+        document.getElementById("dropdownMenuButton2").innerText = "BRL";
+        targetSelectionString = "BRL";
+    }
+    else if (selection == 26) {
+        document.getElementById("dropdownMenuButton2").innerText = "RON";
+        targetSelectionString = "RON";
+    }
+    else if (selection == 27) {
+        document.getElementById("dropdownMenuButton2").innerText = "NZD";
+        targetSelectionString = "NZD";
+    }
+    else if (selection == 28) {
+        document.getElementById("dropdownMenuButton2").innerText = "JPY";
+        targetSelectionString = "JPY";
+    }
+    else if (selection == 29) {
+        document.getElementById("dropdownMenuButton2").innerText = "RUB";
+        targetSelectionString = "RUB";
+    }
+    else if (selection == 30) {
+        document.getElementById("dropdownMenuButton2").innerText = "KRW";
+        targetSelectionString = "KRW";
+    }
+    else if (selection == 31) {
+        document.getElementById("dropdownMenuButton2").innerText = "AUD";
+        targetSelectionString = "AUD";
+    }
+    else if (selection == 32) {
+        document.getElementById("dropdownMenuButton2").innerText = "HUF";
+        targetSelectionString = "HUF";
+    }
+    else if (selection == 33) {
+        document.getElementById("dropdownMenuButton2").innerText = "SEK";
+        targetSelectionString = "SEK";
+    }
+}
+
+let exchangeValue = 1;
+
 async function showCurrency() {
-    let baseSelection = (selectionArray.indexOf(true)) + 1;
     let dateSelection = document.getElementById("input-date").value;
-    let baseURL = `https://api.ratesapi.io/api/${dateSelection}?base=${selectionString}`;
+    let baseURL = `https://api.ratesapi.io/api/${dateSelection}?base=${selectionString}&symbols=${targetSelectionString}`;
     let response = await fetch(baseURL, {
         method: 'GET',
     });
 
-    let characterInfo = await response.json();
-    console.log(characterInfo);
+    let resultValue = await response.json();
+    console.log(resultValue.rates);
+    document.getElementById("from-converter").innerText = selectionString;
+    document.getElementById("to-converter").innerText = targetSelectionString;
+
+    document.getElementById("from-input-field").value = 1;
+    document.getElementById("to-input-field").value = 1 * Object.values(resultValue.rates)[0].toFixed(2);
+    exchangeValue = Object.values(resultValue.rates)[0];
+}
+
+function converter(){
+    let fromValue = document.getElementById("from-input-field").value;
+    document.getElementById("to-input-field").value = (fromValue * exchangeValue).toFixed(2);
+}
+
+function reverseConverter(){
+    let toValue = document.getElementById("to-input-field").value;
+    document.getElementById("from-input-field").value = (toValue / exchangeValue).toFixed(2);
 }
